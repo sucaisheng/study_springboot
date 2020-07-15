@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sucaisheng.study_springboot.mapper.UserMapper">
+    <!--id 在此配置文件中不可重复。且需要与对应接口中的方法名保持一致
+       自定义类型的对象，需要些全路径。除非配置别名
+       resultType : 标识自动映射
+       resultMap : 手动映射
+   -->
+    <select id="getUsersById" parameterType="Integer" resultType="Users">
+        select * from t_user where id = #{id}
+    </select>
+
+</mapper>
